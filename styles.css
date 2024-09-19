@@ -58,13 +58,12 @@ nav ul li a:hover,
 nav ul li a:focus {
     color: #e67e22;
     outline: 2px solid #e67e22; /* Accessibility improvement */
-    outline-offset: 2px;
 }
 
 /* Hero Section */
 .hero {
     position: relative;
-    background: linear-gradient(to bottom right, rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.6)), url('images/bg1.jpg') no-repeat center center/cover;
+    background: url('images/bg1.jpg') no-repeat center center/cover; /* Removed gradient */
     color: #f0f0f0;
     text-align: center;
     padding: 120px 20px;
@@ -110,7 +109,6 @@ nav ul li a:focus {
 
 /* Hero Tagline Section */
 #hero-tagline {
-    background: linear-gradient(135deg, #e67e22, #d35400);
     color: #fff;
     padding: 80px 20px;
     text-align: center;
@@ -277,7 +275,7 @@ h2 {
 #moving-text {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #e67e22, #d35400);
+    background: #e67e22; /* Removed gradient */
     color: #fff;
     padding: 30px;
     text-align: center;
@@ -292,6 +290,7 @@ h2 {
 
 @keyframes moveText {
     0% { transform: translateX(100%); }
+    50% { transform: translateX(-50%); } /* Adjusted to move further */
     100% { transform: translateX(-100%); }
 }
 
@@ -323,18 +322,32 @@ h2 {
 footer {
     background-color: #2c3e50;
     color: #f0f0f0;
-    padding: 30px 20px;
+    padding: 20px 0;
     text-align: center;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
 }
 
-#footer-div {
-    margin-bottom: 20px;
+footer .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between links */
+    margin: 10px 0;
 }
 
-#footer-bottom {
-    font-size: 1rem;
+footer .footer-links a {
+    color: #e67e22; /* Highlighted link color */
+    transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: #d35400; /* Darker color on hover */
+}
+
+footer .footer-info {
+    font-size: 0.9rem;
+    margin-top: 10px;
 }
 
 /* Fade-in Animation */
@@ -361,6 +374,19 @@ footer {
     .hero-content p {
         font-size: 1.2rem;
     }
+
+    footer {
+        padding: 15px 10px; /* Adjust padding */
+    }
+
+    footer .footer-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px; /* Reduced space between links */
+    }
+
+    footer .footer-info {
+        font-size: 0.8rem; /* Smaller font size */
+    }
 }
 
 @media (max-width: 480px) {
@@ -386,5 +412,17 @@ footer {
 
     .hero-content p {
         font-size: 1rem;
+    }
+
+    footer {
+        padding: 10px 5px; /* Further adjust padding */
+    }
+
+    footer .footer-links {
+        gap: 5px; /* Minimal space between links */
+    }
+
+    footer .footer-info {
+        font-size: 0.7rem; /* Even smaller font size */
     }
 }
