@@ -2,6 +2,9 @@
 
 Modern landing page for Startup Sphere with smooth motion, premium cursor effects, and a streaming-ready video section.
 
+## Live Site
+- https://startupsite-blush.vercel.app
+
 ## Features
 - Responsive multi-section landing layout
 - Smooth scroll animations with GSAP + Locomotive Scroll
