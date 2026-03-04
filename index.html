@@ -4,40 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Startup Sphere</title>
+    <meta name="description" content="Startup Sphere helps founders launch, validate, and scale with strategy, design, and engineering support.">
+    <meta property="og:title" content="Startup Sphere">
+    <meta property="og:description" content="Empowering startups with strategy, product, and growth support.">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.2/locomotive-scroll.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.2/locomotive-scroll.min.js"></script>
 </head>
 <body>
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
     <div data-scroll-container>
-        <header>
-            <nav>
+        <header class="site-header">
+            <nav class="nav">
                 <div class="container">
-                    <h1>Startup Sphere</h1>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                    <div class="brand">
+                        <span class="brand-mark"></span>
+                        <h1>Startup Sphere</h1>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="#home" class="glowable glow-inline">Home</a></li>
+                        <li><a href="#services" class="glowable glow-inline">Services</a></li>
+                        <li><a href="#work" class="glowable glow-inline">Work</a></li>
+                        <li><a href="#contact" class="glowable glow-inline">Contact</a></li>
                     </ul>
+                    <a href="#contact" class="btn btn-small nav-cta glowable glow-inline">Schedule a Call</a>
                 </div>
             </nav>
         </header>
         
         <main>
             <section id="home" class="hero" data-scroll-section>
-                <div class="hero-content">
-                    <h2>Empowering Startups</h2>
-                    <p>Your journey to success begins here. We provide the tools and support to help your startup thrive.</p>
-                    <a href="#contact" class="btn">Get in Touch</a>
+                <div class="hero-inner">
+                    <div class="hero-content">
+                        <span class="pill">Startup acceleration studio</span>
+                        <h2>Empowering startups to launch, scale, and lead their markets.</h2>
+                        <p>We partner with founders to design standout products, validate demand fast, and build growth systems that compound over time.</p>
+                        <div class="hero-actions">
+                            <a href="#contact" class="btn glowable glow-inline">Get in Touch</a>
+                            <a href="#services" class="btn btn-ghost glowable glow-inline">Explore Services</a>
+                        </div>
+                        <div class="hero-metrics">
+                            <div class="metric">
+                                <span class="count" data-count="120">0</span>
+                                <span class="label">Startups supported</span>
+                            </div>
+                            <div class="metric">
+                                <span class="count" data-count="48">0</span>
+                                <span class="label">Global partners</span>
+                            </div>
+                            <div class="metric">
+                                <span class="count" data-count="9">0</span>
+                                <span class="label">Weeks to MVP</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="tilt-card glowable">
+                            <h3>Launch Radar</h3>
+                            <p>Live market scans to keep your roadmap ahead.</p>
+                            <div class="card-meta">
+                                <span>AI Insights</span>
+                                <span>Weekly</span>
+                            </div>
+                        </div>
+                        <div class="tilt-card accent glowable">
+                            <h3>Growth Deck</h3>
+                            <p>Investor-ready storytelling with traction narratives.</p>
+                            <div class="card-meta">
+                                <span>Pitch Lab</span>
+                                <span>Series A+</span>
+                            </div>
+                        </div>
+                        <div class="tilt-card glowable">
+                            <h3>Product Lab</h3>
+                            <p>Rapid prototyping and user testing in days.</p>
+                            <div class="card-meta">
+                                <span>Design Sprint</span>
+                                <span>5 Days</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             
             <section id="hero-tagline" data-scroll-section>
-                <div id="text-content">
-                    <h3>StartupSphere is a multi-disciplinary society focused on creating unique ideas into reality, end-to-end experiences, and environments.</h3>
-                    <div id="right">
+                <div class="container highlight-panel">
+                    <div class="panel-text">
+                        <h3>StartupSphere is a multi-disciplinary society focused on turning unique ideas into reality, with end-to-end experiences and environments that scale.</h3>
+                        <p>From early validation to global growth, we deliver the strategic and technical backbone that ambitious startups need.</p>
+                    </div>
+                    <div class="panel-words">
                         <h1>CREATE <br> INSPIRE <br> SUCCEED</h1>
                     </div>
                 </div>
@@ -49,57 +115,78 @@
             
             <section id="services" class="services" data-scroll-section>
                 <div class="container">
-                    <h2>Our Services</h2>
-                    <div class="service">
-                        <h3>Consulting</h3>
-                        <p>Expert advice to guide your startup to success.</p>
+                    <div class="section-header">
+                        <h2>Our Services</h2>
+                        <p>Focused, modular teams that plug into your startup where it matters most.</p>
                     </div>
-                    <div class="service">
-                        <h3>Marketing</h3>
-                        <p>Effective strategies to reach your target audience.</p>
-                    </div>
-                    <div class="service">
-                        <h3>Development</h3>
-                        <p>Custom solutions to build and scale your startup.</p>
+                    <div class="service-grid">
+                        <div class="service-card glowable">
+                            <h3>Consulting</h3>
+                            <p>Vision, positioning, and go-to-market strategies that unlock momentum.</p>
+                        </div>
+                        <div class="service-card glowable">
+                            <h3>Marketing</h3>
+                            <p>Brand systems, growth loops, and demand engines tailored to your ICP.</p>
+                        </div>
+                        <div class="service-card glowable">
+                            <h3>Development</h3>
+                            <p>Scalable product builds with modern stacks and growth-ready architecture.</p>
+                        </div>
                     </div>
                 </div>
             </section>
             
             <section id="page2-bottom" data-scroll-section>
-                <h1>We are a group of passion-driven, goal-focused creators, developers, and problem solvers who believe that smart work makes all the difference.</h1>
-                <div id="bottom-part2">
-                    <img src="video.mp4" alt="Background Image" loading="lazy">
-                    <p>We love to create, we love to solve, we love to collaborate, and we love to turn amazing ideas into reality. We’re here to partner with you through every step of the process and know that relationships are the most important things we build.</p>
+                <div class="container split-section">
+                    <div class="split-text">
+                        <h1>We are a group of passion-driven, goal-focused creators, developers, and problem solvers who believe that smart work makes all the difference.</h1>
+                        <p>We love to create, we love to solve, we love to collaborate, and we love to turn amazing ideas into reality. We partner with you through every step of the process and know that relationships are the most important things we build.</p>
+                        <div class="pill-row">
+                            <span class="pill">Strategy</span>
+                            <span class="pill">Product</span>
+                            <span class="pill">Growth</span>
+                            <span class="pill">Community</span>
+                        </div>
+                    </div>
+                    <div class="split-media">
+                        <div class="media-frame">
+                            <video src="video.mp4" muted autoplay loop playsinline preload="auto" poster="images/bg1.jpg" disablepictureinpicture></video>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section id="page3" data-scroll-section>
-                <div id="elem-container">
-                    <div class="elem" style="background-image: url('images/1.jpeg');">
+            <section id="work" data-scroll-section>
+                <div class="container section-header">
+                    <h2>Featured Work</h2>
+                    <p>Impact-focused engagements that help founders turn bold ideas into real-world traction.</p>
+                </div>
+                <div id="elem-container" class="work-grid">
+                    <div class="elem glowable" style="background-image: url('images/1.jpeg');">
                         <div class="overlay"></div>
                         <h2>FISH TANK</h2>
                     </div>
-                    <div class="elem" style="background-image: url('images/2.jpeg');">
+                    <div class="elem glowable" style="background-image: url('images/2.jpeg');">
                         <div class="overlay"></div>
                         <h2>SYMBIOSYM</h2>
                     </div>
-                    <div class="elem" style="background-image: url('images/3.jpeg');">
+                    <div class="elem glowable" style="background-image: url('images/3.jpeg');">
                         <div class="overlay"></div>
                         <h2>STARTUP CONFERENCE</h2>
                     </div>
-                    <div class="elem" style="background-image: url('images/4.jpeg');">
+                    <div class="elem glowable" style="background-image: url('images/4.jpeg');">
                         <div class="overlay"></div>
                         <h2>INVEST FUSION</h2>
                     </div>
-                    <div class="elem" style="background-image: url('images/5.jpeg');">
+                    <div class="elem glowable" style="background-image: url('images/5.jpeg');">
                         <div class="overlay"></div>
                         <h2>ORIENTATION</h2>
                     </div>
-                    <div class="elem" style="background-image: url('images/6.jpeg');">
+                    <div class="elem glowable" style="background-image: url('images/6.jpeg');">
                         <div class="overlay"></div>
                         <h2>RECRUITMENT</h2>
                     </div>
-                    <div class="elem" style="background-image: url('images/7.jpeg');">
+                    <div class="elem glowable" style="background-image: url('images/7.jpeg');">
                         <div class="overlay"></div>
                         <h2>TEAM</h2>
                     </div>
@@ -133,18 +220,73 @@
                 </div>
             </section>
 
-            <footer id="footer">
-                <div id="footer-div">
-                    <!-- Add footer content here -->
+            <section id="process" class="process" data-scroll-section>
+                <div class="container">
+                    <div class="section-header">
+                        <h2>How We Work</h2>
+                        <p>A proven system that keeps founders aligned, fast, and confident in every decision.</p>
+                    </div>
+                    <div class="process-grid">
+                        <div class="process-step glowable">
+                            <span class="step-number">01</span>
+                            <h3>Discover</h3>
+                            <p>We align on goals, market signals, and the fastest path to validation.</p>
+                        </div>
+                        <div class="process-step glowable">
+                            <span class="step-number">02</span>
+                            <h3>Design</h3>
+                            <p>We craft the product story, UX flows, and brand identity.</p>
+                        </div>
+                        <div class="process-step glowable">
+                            <span class="step-number">03</span>
+                            <h3>Deliver</h3>
+                            <p>We build and ship with rapid iterations and growth insights.</p>
+                        </div>
+                    </div>
                 </div>
-                <h1>LETS_BUILD_SS!</h1>
+            </section>
+
+            <section id="contact" class="contact" data-scroll-section>
+                <div class="container contact-grid">
+                    <div class="contact-info">
+                        <h2>Let’s build your next chapter.</h2>
+                        <p>Tell us about your startup and we’ll respond within 24 hours with next steps.</p>
+                        <div class="contact-details">
+                            <div>
+                                <h4>Email</h4>
+                                <p>hello@startupsphere.io</p>
+                            </div>
+                            <div>
+                                <h4>Office</h4>
+                                <p>New Delhi · Bengaluru · Remote</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form glowable">
+                        <input type="text" name="name" placeholder="Full name" required>
+                        <input type="email" name="email" placeholder="Work email" required>
+                        <input type="text" name="company" placeholder="Startup name">
+                        <textarea name="message" rows="5" placeholder="Tell us about your vision"></textarea>
+                        <button type="submit" class="btn glowable glow-inline">Send message</button>
+                    </form>
+                </div>
+            </section>
+
+            <footer id="footer">
+                <div class="container footer-content">
+                    <div class="footer-brand">
+                        <h1>LETS_BUILD_SS!</h1>
+                        <p>We help founders move from idea to impact with clarity, speed, and bold execution.</p>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#home" class="glowable glow-inline">Home</a>
+                        <a href="#services" class="glowable glow-inline">Services</a>
+                        <a href="#work" class="glowable glow-inline">Work</a>
+                        <a href="#contact" class="glowable glow-inline">Contact</a>
+                    </div>
+                </div>
                 <div id="footer-bottom">
                     <p>&copy; 2024 Startup Sphere. All rights reserved.</p>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
                 </div>
             </footer>
         </main>
@@ -179,11 +321,136 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target && scroll && scroll.scrollTo) {
+                    scroll.scrollTo(target);
+                } else if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
             });
         });
+
+        const counters = document.querySelectorAll(".count");
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                const el = entry.target;
+                const target = parseInt(el.dataset.count, 10);
+                let current = 0;
+                const step = Math.max(1, Math.floor(target / 60));
+                const tick = () => {
+                    current = Math.min(target, current + step);
+                    el.textContent = current;
+                    if (current < target) requestAnimationFrame(tick);
+                };
+                requestAnimationFrame(tick);
+                counterObserver.unobserve(el);
+            });
+        }, { threshold: 0.6 });
+        counters.forEach((counter) => counterObserver.observe(counter));
+
+        const tiltCards = document.querySelectorAll(".tilt-card, .service-card");
+        tiltCards.forEach((card) => {
+            card.addEventListener("mousemove", (event) => {
+                const rect = card.getBoundingClientRect();
+                const x = event.clientX - rect.left;
+                const y = event.clientY - rect.top;
+                const rotateX = ((y / rect.height) - 0.5) * -10;
+                const rotateY = ((x / rect.width) - 0.5) * 10;
+                card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+            });
+            card.addEventListener("mouseleave", () => {
+                card.style.transform = "perspective(900px) rotateX(0deg) rotateY(0deg) translateY(0)";
+            });
+        });
+
+        const cursor = document.querySelector(".cursor");
+        const cursorDot = document.querySelector(".cursor-dot");
+        let targetX = 0;
+        let targetY = 0;
+        let currentX = 0;
+        let currentY = 0;
+        let rafId = null;
+        const speed = 0.2;
+
+        const animateCursor = () => {
+            currentX += (targetX - currentX) * speed;
+            currentY += (targetY - currentY) * speed;
+            if (cursor) cursor.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
+            if (cursorDot) cursorDot.style.transform = `translate3d(${targetX}px, ${targetY}px, 0)`;
+            const dx = Math.abs(targetX - currentX);
+            const dy = Math.abs(targetY - currentY);
+            if (dx < 0.1 && dy < 0.1) {
+                rafId = null;
+                return;
+            }
+            rafId = requestAnimationFrame(animateCursor);
+        };
+
+        window.addEventListener("mousemove", (event) => {
+            targetX = event.clientX;
+            targetY = event.clientY;
+            if (!rafId) {
+                rafId = requestAnimationFrame(animateCursor);
+            }
+        });
+
+        document.querySelectorAll(".glowable").forEach((el) => {
+            el.addEventListener("mouseenter", () => {
+                cursor?.classList.add("cursor-active");
+                cursorDot?.classList.add("cursor-dot-active");
+            });
+            el.addEventListener("mouseleave", () => {
+                cursor?.classList.remove("cursor-active");
+                cursorDot?.classList.remove("cursor-dot-active");
+            });
+        });
+
+        const ensureVideoPlay = (video) => {
+            video.muted = true;
+            video.loop = true;
+            video.autoplay = true;
+            video.playsInline = true;
+            video.setAttribute("muted", "");
+            video.setAttribute("playsinline", "");
+            video.setAttribute("autoplay", "");
+            if (video.readyState < 2) {
+                video.load();
+            }
+            const playPromise = video.play();
+            if (playPromise && typeof playPromise.catch === "function") {
+                playPromise.catch(() => {});
+            }
+        };
+
+        document.querySelectorAll(".media-frame video").forEach((video) => {
+            const frame = video.parentElement;
+            if (!frame) return;
+            const markReady = () => frame.classList.add("is-ready");
+            if (video.readyState >= 2) {
+                markReady();
+            } else {
+                video.addEventListener("canplay", markReady, { once: true });
+            }
+            const tryPlay = () => ensureVideoPlay(video);
+            video.addEventListener("play", markReady);
+            video.addEventListener("loadeddata", tryPlay, { once: true });
+            setTimeout(tryPlay, 300);
+            document.addEventListener("visibilitychange", () => {
+                if (!document.hidden) tryPlay();
+            });
+            window.addEventListener("pointerdown", tryPlay, { once: true });
+        });
+
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const video = entry.target;
+                    ensureVideoPlay(video);
+                }
+            });
+        }, { threshold: 0.4 });
+        document.querySelectorAll(".media-frame video").forEach((video) => videoObserver.observe(video));
     </script>
 </body>
 </html>
